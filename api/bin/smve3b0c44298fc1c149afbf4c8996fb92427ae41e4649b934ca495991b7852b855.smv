@@ -1,0 +1,20 @@
+MODULE main
+	VAR
+	VDSSD	: boolean;
+	VDSVSD	: boolean;
+SPEC VDSSD
+ASSIGN
+init(VDSSD) := TRUE;
+init(VDSVSD) := TRUE;
+next(VDSSD):=
+	case
+		VDSSD = TRUE & VDSVSD = TRUE  : FALSE;
+		VDSSD = TRUE & VDSVSD = FALSE  : FALSE;
+		TRUE : TRUE;
+	esac;
+next(VDSVSD):=
+	case
+		VDSSD = TRUE & VDSVSD = TRUE  : FALSE;
+		VDSSD = TRUE & VDSVSD = FALSE  : TRUE;
+		TRUE : TRUE;
+	esac;

@@ -1,0 +1,25 @@
+{% load render_bundle from webpack_loader %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/websmv.css' %}">
+        <title> WebSMV </title>
+    </head>
+    <body>
+        <section>
+            <div class="app-container">
+                <div class="dropdown-container" id="dropdown-container"></div>
+                <div class="state-editor-container" id="state-editor-container"></div>
+                <div class="workspace-container" id="workspace-container"></div>
+                <div class="run-config-container" id="run-config-container"></div>
+                <div class="source-code-editor-container" id="source-code-editor-container"></div>
+                <div class="results-container" id="results-container"></div>
+            </div>
+            {% render_bundle 'main' %}
+        </section>
+    </body>
+</html>

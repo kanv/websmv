@@ -1,0 +1,956 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fbfbfb;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 12pt;
+}
+
+/*
+*   Navigation bar style.
+*/
+
+.main-navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00BCD4;
+}
+
+.important-tab{
+    float: left;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 120px;
+}
+
+.about-tab {
+    float: right;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 120px;
+}
+
+/*
+*   Horizontal separator
+*/
+
+.separator {
+    display: table;
+    margin: 2% auto;
+    /*margin-top: 5px;*/
+    width:80%;
+    height:1px;
+    clear:both;
+    background-color: #999999;
+}
+
+/*
+*   Toolbar style
+*/
+
+.state-editor-container {
+    float: left;
+    display: inline-block;
+    width: 15%;
+    /*height:225px;*/
+	height: 92vh;
+    margin: 1%;
+    overflow-y: visible;
+    overflow-x: hidden;
+    background-color: #efefef;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.state-editor-header {
+    text-align: left;
+    font-family:Verdana;
+    font-size: medium;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    padding-left: 2vh;
+    color: #202020;
+    background-color: #00e5ff;
+}
+
+.state-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.state-item {
+    float: left;
+    background-color: #efefef;
+    list-style-type: none;
+    margin: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 0;
+    overflow: hidden;
+    display: inline;
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: small;
+}
+
+.state-item li {
+    display: inline;
+}
+
+.state-name {
+    display: inline-block;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom:1%;
+    float: left;
+    width: 59%;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: medium;
+}
+
+.state-type {
+    display: inline-block;
+    float: right;
+    width: 37%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-right: 1%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: medium;
+}
+
+.state-edit{
+    display: inline-block;
+    float: right;
+    width: 45%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-right: 1%;
+}
+
+.label-var-value{
+    display: inline-block;
+    float: left;
+    height: 10%;
+    width: 47%;
+    margin: 1% 1% 1% 2%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: small;
+}
+
+.state-name-edit {
+    float: left;
+    width: 69%;
+    padding: 0;
+    margin-left: 1%;
+    margin-top: 2%;
+    position: relative;
+}
+
+.enum-item-edit {
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+
+.enum-item{
+    display: inline-block;
+    width: 78%;
+    margin: 1%;
+}
+
+.btn-add-enum{
+    display: inline-block;
+    float: right;
+    width: 14%;
+    background-color: #00e5ff;
+    border: none;
+    margin: 1%;
+    margin-top: 2%;
+    overflow:hidden;
+    box-shadow: 0 0 2px gray;
+}
+.btn-add-enum a{
+    width: 100%;
+    height: 100%;
+    font-family:Verdana;
+    font-size: medium;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-add-enum:hover{
+    background-color: #00b2cc;
+}
+
+.enum-item-add{
+    display: inline-block;
+    width: 74%;
+    margin: 1%;
+    margin-top: 2%;
+}
+
+.state-range-edit{
+    width: 27%;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.label-state-range{
+    float: left;
+    width: 68%;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.remove-enum{
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.state-remove {
+    background-color: #00e5ff;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    width: 98%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-right: 1%;
+    font-family:Verdana;
+    font-size: medium;
+    font-weight: 900;
+    overflow:hidden;
+    color: white;
+    box-shadow: 0 0 2px gray;
+}
+
+.state-remove:hover{
+    background-color: #00BCD4;
+}
+
+.state-type-edit {
+    float: left;
+    width: 27%;
+    margin-right: 1%;
+    margin-top: 2%;
+}
+
+.state-type-edit-arr{
+    float: left;
+    width: 27%;
+    margin: 1%;
+}
+
+.state-edit-arr{
+    width:48%;
+    margin: 1%;
+    float: left;
+}
+
+.arr-select-container{
+    width: 100%;
+}
+
+.arr-select-label{
+    width:47%;
+    margin: 1%;
+    font-family:Verdana;
+}
+
+/* ==========  Select Field ========== */
+
+/* Style Select Field */
+select {
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #222222;
+}
+
+/* Remove focus */
+select:focus {
+  outline: none}
+
+/* Use custom arrow */
+.mdl-selectfield select {appearance: none}
+.mdl-selectfield {
+  font-family: 'Roboto','Helvetica','Arial',sans-serif;
+  position: relative;
+}
+.mdl-selectfield:after {
+        position: absolute;
+        top: 0.75em;
+        right: 0.5em;
+        /* Styling the down arrow */
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: '';
+        border-left: .25em solid transparent;
+        border-right: .25em solid transparent;
+        border-top: .375em solid #222222;
+        pointer-events: none;
+}
+
+* { box-sizing:border-box; }
+
+/* basic stylings ------------------------------------------ */
+
+input {
+    font-size:small;
+    margin-left: 1%;
+    margin-right: 1%;
+    display:block;
+    width:98%;
+    border:none;
+    background-color: #efefef;
+    border-bottom:1px solid #555555;
+}
+input:focus {
+    outline:none;
+    border-bottom:1px solid #00e5ff;
+}
+
+
+/* active state */
+/*input:focus ~ .input-label, input:valid ~ .input-label{*/
+  /*top:-20px;*/
+  /*font-size:14px;*/
+  /*color:#5264AE;*/
+/*}*/
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:100%; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#00e5ff;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#00e5ff; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#00e5ff; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#00e5ff; }
+  to 	{ width:0; background:transparent; }
+}
+
+.state-add {
+    background-color: #00e5ff;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    width: 27%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-right: 1%;
+    border-radius:50%;
+}
+
+.round-button {
+    padding: 2%;
+	width:25%;
+    float: right;
+}
+.round-button-circle {
+	width: 100%;
+	height:0;
+	padding-bottom: 100%;
+    border-radius: 50%;
+	border: none;
+    overflow:hidden;
+    background: #00e5ff;
+    box-shadow: 0 0 2px gray;
+}
+.round-button-circle:hover {
+	background:#00b2cc;
+}
+.round-button a {
+    display:block;
+	float:left;
+	width:100%;
+	padding-top:50%;
+    padding-bottom:50%;
+	line-height:1em;
+	margin-top:-0.5em;
+
+	text-align:center;
+    font-family:Verdana;
+    font-size: large;
+    font-weight: 900;
+    text-decoration:none;
+    color: white;
+}
+
+.tl-item-label{
+    width:68%;
+    margin: 1%;
+    text-overflow: clip;
+    font-family: monospace;
+    font-size: small;
+}
+
+.btn-remove-formula{
+    float: right;
+    width: 28%;
+    margin: 1%;
+    background-color: #00e5ff;
+    border: none;
+    overflow:hidden;
+    box-shadow: 0 0 2px gray;
+}
+
+.btn-remove-formula:hover {
+	background:#00b2cc;
+}
+/*
+*   Workspace container style
+*/
+
+.workspace {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.workspace-container {
+    float: none;
+    display: inline-block;
+    width: 64%;
+    /*height: 550px;*/
+	height: 92vh;
+    background-color: #efebe9;
+    border-width: 0;
+    outline: none;
+    margin: 1%;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.main-svg {
+    width: 1600px;
+    height: 1600px;
+}
+
+/*
+ * Source code editor container
+ */
+
+.source-code-editor-container {
+    margin: 1%;
+    float: left;
+    display: inline-block;
+    width: 48%;
+    height: 100vh;
+    overflow: scroll;
+    background-color: #fbfbfb;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.source-code-editor {
+    width: 100%;
+    font-family: monospace;
+}
+
+/*
+ * Options container
+ */
+
+.run-config {
+    width: 100%;
+    height: 100%;
+}
+
+.run-config-container {
+    float: right;
+    display: inline-block;
+    width: 15%;
+    margin: 1%;
+	height: 92vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: #efefef;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.tl-expr-list {
+    display: inline-block;
+    list-style-type: none;
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.tl-box {
+    display:inline-block;
+}
+
+.tl-expr-item {
+    width: 98%;
+    margin: 1%;
+}
+
+.tl-expr {
+    width: 98%;
+    margin: 1%;
+    font-family: monospace;
+    font-size: small;
+}
+
+.boolean-operators-box{
+    width: 32%;
+    float: left;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.boolean-operators-box button {
+    width: 50%;
+    text-align: center;
+    background-color: #00e5ff;
+    border-width: 0;
+    outline: none;
+    font-size: smaller;
+    font-family: "Verdana"
+}
+
+.ctl-operators-box {
+    display:inline-block;
+    float: right;
+    width:64%;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.ctl-operators-box button {
+    width: 25%;
+    text-align: center;
+    background-color: #00e5ff;
+    border-width: 0;
+    outline: none;
+    font-family: Verdana;
+    font-size: small;
+    color: black;
+}
+
+.state-insert-box{
+    float: right;
+    width: 64%;
+    font-family: inherit;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 2%;
+    font-size: 100%;
+    color: #333333;
+    border: none;
+    border-bottom: 1px solid #333333;
+}
+
+.state-select:focus {
+  outline: none}
+
+.state-select {appearance: none}
+
+.state-select. {
+        position: absolute;
+        top: 0.75em;
+        right: 0.5em;
+        /* Styling the down arrow */
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: '';
+        border-left: .25em solid transparent;
+        border-right: .25em solid transparent;
+        border-top: .375em solid #333333;
+        pointer-events: none;
+    }
+
+.state-select {
+    width:75%;
+}
+
+.btn-add-state-tl {
+    width:25%;
+    text-align: center;
+    background-color: #00e5ff;
+    border-width: 0;
+    outline: none;
+}
+
+.btn-add-tl-expr {
+    width:98%;
+    margin: 1%;
+    text-align: center;
+    background-color: #00e5ff;
+    border-width: 0;
+    outline: none;
+    border-width: 0;
+    overflow:hidden;
+    box-shadow: 0 0 2px gray;
+    font-family: Verdana;
+    font-size: large;
+
+}
+
+.button-list {
+    display: inline-block;
+    list-style-type: none;
+    width: 98%;
+    height: 20%;
+    margin: 1%;
+    padding: 0;
+    border-width: 0;
+    overflow:hidden;
+    box-shadow: 0 0 2px gray;
+}
+
+.button-list li {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+.button-list-item-inactive {
+    width: 100%;
+    height: 100%;
+    font-family:Verdana;
+    font-size: medium;
+    text-align: center;
+    background-color: #00e5ff;
+    border-width: 0;
+    outline: none;
+}
+
+.button-list-item-active {
+    width: 100%;
+    height: 100%;
+    font-family:Verdana;
+    font-size: medium;
+    text-align: center;
+    background-color: #00b2cc;
+    border-width: 0;
+    outline: none;
+}
+
+.boolean-operators-box button:hover{
+    background-color: #00b2cc;
+}
+
+.btn-add-state-tl:hover{
+    background-color: #00b2cc;
+}
+
+.btn-add-tl-expr:hover{
+    background-color: #00b2cc;
+}
+
+.ctl-operators-box button:hover{
+    background-color: #00b2cc;
+}
+
+.button-list-item-inactive:hover{
+    background-color: #00b2cc;
+}
+
+.button-list-item-active:hover{
+    background-color: #00b2cc;
+}
+
+.button-list-tl-inactive:hover{
+    background-color: #00b2cc;
+}
+
+.button-list-tl-active:hover{
+    background-color: #00b2cc;
+}
+
+.button-list-tl-inactive {
+    width:100%;
+    display: inline-block;
+}
+
+.tl-type-label {
+    width:100%;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.button-list-tl-inactive{
+    width:50%;
+    text-align: center;
+    background-color: #00e5ff;
+    border-width: 0;
+    outline: none;
+    font-family: Verdana;
+}
+
+.button-list-tl-active{
+    width:50%;
+    text-align: center;
+    background-color: #00b2cc;
+    border-width: 0;
+    outline: none;
+    font-family:Verdana;
+}
+
+.ltl-operators-box{
+    display:inline-block;
+    float: right;
+    width:64%
+}
+
+.ltl-operators-box button {
+    width: 25%;
+    text-align: center;
+    background-color: #00e5ff;
+    border-width: 0;
+    outline: none;
+    font-family: Verdana;
+}
+
+.ltl-operators-box button:hover{
+    background-color: #00b2cc;
+}
+
+.button-run{
+    width: 98%;
+    margin: 1%;
+    margin-top: 3%;
+    background-color: #00e5ff;
+    text-align: center;
+    font-family: Verdana;
+    font-size: large;
+    font-weight: 400;
+}
+
+.button-run:hover{
+    background-color: #00b2cc;
+}
+
+/*
+*   Dropdown menu style
+*/
+
+.dropdown-container {
+    background-color: #00b2cc;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dropbtn {
+    background-color: #00b2cc;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00e5ff;
+    color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #6effff;
+}
+
+/*
+*   Hover handlers for dropdowns by ids
+*/
+
+#file-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#edit-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#view-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#help-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*
+* Hover handlers for buttons in dropdowns by ids
+*/
+
+#file-dropdown:hover .dropbtn {
+    background-color: #00e5ff;
+    color: black;
+}
+
+#edit-dropdown:hover .dropbtn {
+    background-color: #00e5ff;
+    color: black;
+}
+
+#view-dropdown:hover .dropbtn {
+    background-color: #00e5ff;
+    color: black;
+}
+
+#help-dropdown:hover .dropbtn {
+    background-color: #00e5ff;
+    color: black;
+}
+
+/*
+ * d3 svg elements style
+ */
+
+.vertex-active {
+    stroke: #00b2cc;
+    stroke-width: 2;
+    fill: #00b2cc;
+}
+
+.vertex-inactive {
+    stroke: #00e5ff;
+    stroke-width: 2;
+    fill: #00e5ff;
+}
+
+.vertex-init {
+    stroke: #76ff03;
+    stroke-width: 2;
+    fill: #76ff03;
+}
+
+.line-active {
+    stroke: #ff2222;
+    stroke-width: 3;
+    fill: #ff2222;
+}
+
+.line-inactive {
+    stroke: #00bcff;
+    stroke-width: 3;
+    fill: #00deff;
+}
+
+.vertex-group {
+    width: 20px;
+    height: 20px;
+}
+
+.context-menu-item {
+    fill: #cccccc;
+    stroke-width: 1;
+    stroke: #444444;
+}

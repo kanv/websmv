@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select value change test 1`] = `
+<div
+  className="state-item"
+>
+  <div
+    className="state-name"
+    type="state-name"
+    value="test"
+  >
+    test
+  </div>
+  <div
+    className="state-type"
+  >
+    Boolean
+  </div>
+  <div
+    className="label-var-value"
+  >
+    Value
+  </div>
+  <select
+    className="state-edit"
+    onChange={[Function]}
+    value="false"
+  >
+    <option
+      value="TRUE"
+    >
+      TRUE
+    </option>
+    <option
+      value="FALSE"
+    >
+      FALSE
+    </option>
+  </select>
+  <button
+    className="state-remove"
+    onClick={[Function]}
+  >
+    -
+  </button>
+</div>
+`;
